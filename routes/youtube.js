@@ -19,9 +19,7 @@ router.get("/information_video", async (req, res) => {
     console.error("Error executing youtube-dl:", error.message);
     res.status(400).json({
       ok: false,
-      data: {
-        message: error,
-      },
+      message: "No se pudo descargar el video",
     });
   }
 });
